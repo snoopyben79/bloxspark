@@ -6,7 +6,7 @@ const enableDarkmode = () => {
     document.body.classList.add('darkmode')
     localStorage.setItem('darkmode', 'active')
     logoImages.forEach(logo => {
-        logo.src = 'images/small white.png'
+        logo.src = '/images/small white.png'
         logo.alt = 'white version'
     })
 }
@@ -15,7 +15,7 @@ const disableDarkmode = () => {
     document.body.classList.remove('darkmode')
     localStorage.setItem('darkmode', null)
     logoImages.forEach(logo => {
-        logo.src = 'images/small black.png'
+        logo.src = '/images/small black.png'
         logo.alt = 'black version'
     })
  
