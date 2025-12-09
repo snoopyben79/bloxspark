@@ -11,8 +11,8 @@ const enableDarkmode = () => {
     darkmode = 'active';
     logoImages.forEach(logo => {
         logo.src = logo.src.includes('/content/') 
-            ? '/images/small white.png' 
-            : 'images/small white.png';
+            ? '../../images/small white.png' 
+            : '../../images/small white.png';
         logo.alt = 'white version';
     });
 }
@@ -22,8 +22,8 @@ const disableDarkmode = () => {
     darkmode = null;
     logoImages.forEach(logo => {
         logo.src = logo.src.includes('/content/') 
-            ? '/images/small black.png' 
-            : 'images/small black.png';
+            ? '../../images/small black.png' 
+            : '../../images/small black.png';
         logo.alt = 'black version';
     });
 }
