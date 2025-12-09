@@ -138,6 +138,28 @@ a.link-fill:hover {
     margin-right: 5px;
 }
 /*------------------------------------The-News--------------------------------------------------------------------*/
+h2 {
+    color: var(--text-button);
+    font-family: "Chivo", sans-serif;
+}
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+li {
+    margin-bottom: 10px;
+}
+ul {
+    color: var(--text-button);
+    font-family: "Lora", serif;
+    font-size: 16px;
+}
+ol {
+    color: var(--text-button);
+    font-family: "Lora", serif;
+    font-size: 16px;
+
+}
 .news-box {
     margin: 0px 65px 0px 65px;
 }
@@ -159,7 +181,7 @@ a.link-fill:hover {
     margin: 1px 0px 0px 0px;
 }
 .paragraph {
-    margin: 30px 0px 20px 0px;
+    margin: 10px 0px 20px 0px;
     font-family: "Lora", serif;
     font-size: 16px;
     font-weight: 500;
