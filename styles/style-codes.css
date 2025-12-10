@@ -236,6 +236,11 @@ a.about:hover {
     width: 320px;
     height: 150px;
     }
+    .img-container {
+    width: 320px;
+    height: 150px;
+}
+
 .title {
     font-size: 22px;
     font-weight: 700;
@@ -272,6 +277,11 @@ a.about {
     width: 230px;
     height: 130px;
     }
+    .img-container {
+    width: 230px;
+    height: 130px;
+}
+
     .catalog {
     padding: 25px 0px 0px 10px;
 
@@ -366,6 +376,11 @@ header {
         width: 200px;
         height: 110px;
     }
+    .img-container {
+    width: 200px;
+    height: 110px;
+}
+
 .title {
     font-size: 13px;
     font-weight: 700;

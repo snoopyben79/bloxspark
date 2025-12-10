@@ -588,6 +588,9 @@ p.paragraph {
 
 /*--------------------------------@media 375px------------------------------------------------------------------------------*/
 @media screen and (max-width: 375px) {
+header {
+    height: 80px;
+}
 .logo {
     width: 68.31px;
     height: 59.4px;
