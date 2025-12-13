@@ -194,15 +194,16 @@ ol {
     display: block;
     margin: 10px auto 10px auto;
     overflow: hidden;
-    width: 700px;
-    height: 400px;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 7 / 4;
     border-radius: 10px;
     position: relative;
 }
 .img-news {
     display: block;
-    width: 700px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     margin: 10px auto 10px auto;
     background-color: #525252;
     border-radius: 10px;
@@ -294,23 +295,6 @@ a.about:hover {
 /*--------------------------------@media Screen Settings------------------------------------------------------------------------------*/
 /*--------------------------------@media 917px------------------------------------------------------------------------------*/
 @media screen and (max-width: 917px) {
-.img-container {
-    margin: 10px 0px 10px 0px;
-    overflow: hidden;
-    width: 600px;
-    height: 300px;
-    border-radius: 10px;
-    position: relative;
-}
-.img-news {
-    width: 600px;
-    height: 300px;
-    margin: 10px 0px 10px 0px;
-    background-color: #525252;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: all 0.40s ease;
-}
 .iframe-set {
     width: 600px; 
     height: 300px;
@@ -323,23 +307,6 @@ a.about:hover {
 }
 /*--------------------------------@media 790px------------------------------------------------------------------------------*/
 @media screen and (max-width: 790px) {
-.img-container {
-    margin: 10px 0px 10px 0px;
-    overflow: hidden;
-    width: 500px;
-    height: 300px;
-    border-radius: 10px;
-    position: relative;
-}
-.img-news {
-    width: 500px;
-    height: 300px;
-    margin: 10px 0px 10px 0px;
-    background-color: #525252;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: all 0.40s ease;
-}
 .iframe-set {
     width: 500px; 
     height: 300px;
@@ -358,23 +325,6 @@ a.about:hover {
 .nav-item {
     font-size: 17px;
     width: 83px;
-}
-.img-container {
-    margin: 10px 0px 10px 0px;
-    overflow: hidden;
-    width: 500px;
-    height: 300px;
-    border-radius: 10px;
-    position: relative;
-}
-.img-news {
-    width: 500px;
-    height: 300px;
-    margin: 10px 0px 10px 0px;
-    background-color: #525252;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: all 0.40s ease;
 }
 .iframe-set {
     width: 500px; 
@@ -421,23 +371,6 @@ p.paragraph {
     border-left: 3px solid #ffdbaa;
     padding: 0px 0px 0px 30px;
 }
-.img-container {
-    margin: 10px 0px 10px 0px;
-    overflow: hidden;
-    width: 450px;
-    height: 250px;
-    border-radius: 10px;
-    position: relative;
-}
-.img-news {
-    width: 450px;
-    height: 250px;
-    margin: 10px 0px 10px 0px;
-    background-color: #525252;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: all 0.40s ease;
-}
 .iframe-set {
     width: 450px; 
     height: 250px;
@@ -450,23 +383,6 @@ p.paragraph {
 }
 /*--------------------------------@media 468px------------------------------------------------------------------------------*/
 @media screen and (max-width: 468px) {
-.img-container {
-    margin: 10px 0px 10px 0px;
-    overflow: hidden;
-    width: 350px;
-    height: 200px;
-    border-radius: 10px;
-    position: relative;
-}
-.img-news {
-    width: 350px;
-    height: 200px;
-    margin: 10px 0px 10px 0px;
-    background-color: #525252;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: all 0.40s ease;
-}
 .iframe-set {
     width: 350px; 
     height: 200px;
@@ -605,23 +521,6 @@ header {
     padding: 5px 0px 0px 0px;
     border-top: 3px solid #ffdbaa;
 
-}
-.img-container {
-    margin: 10px auto 10px auto;
-    overflow: hidden;
-    width: 290px;
-    height: 170px;
-    border-radius: 10px;
-    position: relative;
-}
-.img-news {
-    width: 290px;
-    height: 170px;
-    margin: 10px 0px 10px 0px;
-    background-color: #525252;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: all 0.40s ease;
 }
 .iframe-set {
     width: 290px; 
