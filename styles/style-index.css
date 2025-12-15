@@ -118,16 +118,17 @@ header {
 .img-top-container {
     display: block;
     overflow: hidden;
-    width: 460px;
-    height: 260px;
+    width: 100%;
+    max-width: 460px;
+    aspect-ratio: 23 / 13;
     background-color: #525252;
     border: 0;
 }
 .img-top {
     object-fit: cover;
     display: block;
-    width: 460px;
-    height: 260px;
+    width: 100%;
+    height: 100%;
     transition: all 0.40s ease;
     background-color: #525252;
     border: 0;
@@ -142,11 +143,11 @@ header {
     margin: 10px 0px 5px 5px;
     text-align: left;
     height: 245px;
-    width: 300px;
+    width: clamp(160px, 40vw, 300px);
 }
 .top-title {
     font-family: "Arimo", sans-serif;
-    font-size: 30px;
+    font-size: clamp(1rem, 3vw, 1.7rem);
     font-weight: 700;
     color: var(--text-button);
     margin: 0px 0px 0px 0px;
@@ -154,14 +155,14 @@ header {
 }
 .top-date {
     font-family: "Arimo", sans-serif;
-    font-size: 16px;
+    font-size: clamp(0.563rem, 1.5vw, 1rem);
     color: #b4b4b4;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 3px 0px;
 
 }
 .top-desc {
     font-family: "Arimo", sans-serif;
-    font-size: 18px;
+    font-size: clamp(0.563rem, 2vw, 1.1rem);
     color: var(--text-button);
     margin: 0px 0px 2px 0px;
 
@@ -225,20 +226,20 @@ header {
 }
 .other-title {
     font-family: "Arimo", sans-serif;
-    font-size: 20px;
+    font-size: clamp(0.95rem, 2.5vw, 1.25rem);
     font-weight: 700;
     color: var(--text-button);
     margin: 0;
 }
 .other-date {
     font-family: "Arimo", sans-serif;
-    font-size: 13px;
+    font-size: clamp(0.65rem, 1.5vw, 0.85rem);
     color: #b4b4b4;
     margin: 0px 0px 10px 0px;
 }
 .other-desc {
     font-family: "Arimo", sans-serif;
-    font-size: 16px;
+    font-size: clamp(0.85rem, 2vw, 1rem);
     color: var(--text-button);
     margin: 0px 0px 2px 0px;
 }
@@ -302,23 +303,6 @@ a.about:hover {
 /*--------------------------------@media Screen Settings------------------------------------------------------------------------------*/
 /*--------------------------------@media 768px------------------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
-    .img-top { 
-    width: 420px;
-    height: 220px;
-    }
-    .top-title {
-        font-size: 27px;
-    }
-    .top-date {
-        font-size: 13px;
-    }
-    .top-desc {
-        font-size: 15px;
-    }
-    .text-top {
-        width: 245px;
-        height: auto;
-    }
     .flag {
         font-size: 15px;
         width: 60px;
@@ -345,37 +329,22 @@ a.about:hover {
 }
 /*--------------------------------@media 425px------------------------------------------------------------------------------*/
 @media screen and (max-width: 425px) {
-    .img-top { 
-    width: 230px;
-    height: 130px;
-    margin-left: auto;
+    hr {
+        border: 1px solid #ffdbaa;
     }
-    .top-title {
-        font-size: 16px;
-    }
-    .top-date {
-        font-size: 11px;
-    }
-    .top-desc {
-        font-size: 12px;
+    .top {
+        flex-direction: column;
     }
     .text-top {
-        width: 245px;
+        display: block;
+        margin: 10px 0px 5px 5px;
         height: auto;
-    }
+        width: auto;
+}
     .img-other {
         width: 230px;
         height: 130px;
         margin-left: auto;
-    }
-    .other-title {
-        font-size: 16px;
-    }
-    .other-date {
-        font-size: 11px;
-    }
-    .other-desc {
-        font-size: 12px;
     }
     .flag {
         font-size: 15px;
@@ -398,16 +367,6 @@ a.about:hover {
     .copyright {
         font-size: 13px;
     }
-    .text-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    margin: 10px auto 5px 5px;
-    text-align: left;
-    height: auto;
-    width: 170px;
-    }
-
     .nav-item-theme {
         transform: scale(0.8);
         width: auto;
@@ -470,45 +429,18 @@ a.about:hover {
 }
 /*--------------------------------@media 375px------------------------------------------------------------------------------*/
 @media screen and (max-width: 375px) {
-    .img-top { 
-    width: 200px;
-    height: 110px;
-    margin-left: auto;
-    }
-    .top-title {
-        font-size: 13px;
-    }
-    .top-date {
-        font-size: 9px;
-    }
-    .top-desc {
-        font-size: 9px;
-    }
-    div.text-top {
-        height: auto;
-        width: 140px;
-        margin: 10px 10px 5px 5px;
-    }
     .img-other {
         width: 200px;
         height: 110px;
         margin-left: auto;
-    }
-    .other-title {
-        font-size: 13px;
-    }
-    .other-date {
-        font-size: 9px;
-    }
-    .other-desc {
-        font-size: 9px;
     }
     .flag {
         font-size: 10px;
         width: 60px;
     }
     .flag-line {
-        max-width: 315px;
+        max-width: 100%;
+        min-width: 315px;
     }
     .empty {
        display: none;
@@ -541,18 +473,28 @@ a.about:hover {
         margin: 23px 0px 0px 5px;
 
     }
-    .text-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    margin: 10px auto 5px 5px;
-    text-align: left;
-    height: auto;
-    width: 170px;
-    }
     header {
     height: 80px;
 
     }
 
+}
+/*--------------------------------@media 576px------------------------------------------------------------------------------*/
+@media screen and (max-width: 576px) {
+    .top {
+        flex-direction: column;
+    }
+    .text-top {
+        display: block;
+        margin: 10px 0px 5px 5px;
+        height: auto;
+        width: auto;
+    }
+
+}
+/*--------------------------------@media 562px------------------------------------------------------------------------------*/
+@media screen and (max-width: 562px) {
+    .empty {
+        display: none;
+    }
 }
