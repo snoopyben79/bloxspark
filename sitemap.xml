@@ -12,7 +12,7 @@
   <!-- Codes Page -->
   <url>
     <loc>https://snoopyben79.github.io/bloxspark/codes.html</loc>
-    <lastmod>2025-12-14</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,6 +37,14 @@
   <url>
     <loc>https://snoopyben79.github.io/bloxspark/content/codes/blox_fruit_codes2025.html</loc>
     <lastmod>2025-12-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+    <!-- Grow a Garden Codes -->
+  <url>
+    <loc>https://snoopyben79.github.io/bloxspark/content/codes/grow_a_garden_codes2025.html</loc>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
