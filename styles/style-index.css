@@ -108,6 +108,14 @@ header {
     
 }
 /*----------------------------------------Section 1------------------------------------------------*/
+a {
+    color: var(--text-button);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
 .top {
     display: flex;
     width: auto;
