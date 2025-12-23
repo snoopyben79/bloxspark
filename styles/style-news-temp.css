@@ -103,7 +103,7 @@ header {
     height: 100px;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 10;
     
 }
 /*-------------------------------------Nav-Line------------------------------------------------------------------------------*/
@@ -274,11 +274,76 @@ ol {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
 }
 
 .image-carousel img.active {
-    display: block;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Slide animations */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.5s ease-in-out;
+    opacity: 1 !important;
+    z-index: 2 !important;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.5s ease-in-out;
+    opacity: 1 !important;
+    z-index: 2 !important;
+}
+
+.slide-out-left {
+    animation: slideOutLeft 0.5s ease-in-out;
+    opacity: 1 !important;
+    z-index: 1 !important;
+}
+
+.slide-out-right {
+    animation: slideOutRight 0.5s ease-in-out;
+    opacity: 1 !important;
+    z-index: 1 !important;
 }
 
 .carousel-nav-button {
@@ -352,7 +417,6 @@ ol {
     font-family: "Lato", sans-serif;
     font-size: 14px;
 }
-
 /*--------------------------------Footer----------------------------------------------------------------------*/
 footer {
     display: flex;
