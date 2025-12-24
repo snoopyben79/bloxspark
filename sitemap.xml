@@ -19,8 +19,8 @@
   
   <!-- Reviews Page -->
   <url>
-    <loc>https://snoopyben79.github.io/bloxspark/reviews.html</loc>
-    <lastmod>2025-12-09</lastmod>
+    <loc>https://snoopyben79.github.io/bloxspark/guides.html</loc>
+    <lastmod>2025-12-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -52,7 +52,7 @@
     <!-- Blox Fruit News -->
   <url>
     <loc>https://snoopyben79.github.io/bloxspark/content/codes/blox_fruit_news2025.html</loc>
-    <lastmod>2025-12-21</lastmod>
+    <lastmod>2025-12-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
