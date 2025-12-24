@@ -10,6 +10,12 @@ document.querySelectorAll('.carousel-container').forEach(container => {
 
     let currentIndex = 0;
     let isAnimating = false;
+    
+    // Swipe detection variables
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
+    let currentX = 0;
 
     // Set total counter
     if (totalCounter) {
@@ -77,6 +83,68 @@ document.querySelectorAll('.carousel-container').forEach(container => {
         const newIndex = (currentIndex - 1 + carouselImages.length) % carouselImages.length;
         showImage(newIndex, 'prev');
     }
+
+    // Touch/Mouse event handlers
+    function handleStart(e) {
+        if (isAnimating) return;
+        isDragging = true;
+        startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        startY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+        carousel.style.cursor = 'grabbing';
+    }
+
+    function handleMove(e) {
+        if (!isDragging) return;
+        currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        const currentY = e.type.includes('mouse') ? e.clientY : e.touches[0].clientY;
+        
+        // Calculate the difference to detect vertical vs horizontal scroll
+        const diffX = Math.abs(currentX - startX);
+        const diffY = Math.abs(currentY - startY);
+        
+        // If horizontal movement is greater than vertical, prevent default (stop page scroll)
+        if (diffX > diffY && diffX > 10) {
+            e.preventDefault();
+        }
+    }
+
+    function handleEnd(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        carousel.style.cursor = 'grab';
+        
+        const endX = e.type.includes('mouse') ? e.clientX : e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        const threshold = 50; // Minimum swipe distance
+
+        // Swipe left (next image)
+        if (diff > threshold) {
+            nextImage();
+        }
+        // Swipe right (previous image)
+        else if (diff < -threshold) {
+            prevImage();
+        }
+    }
+
+    // Add touch event listeners
+    carousel.addEventListener('touchstart', handleStart, { passive: true });
+    carousel.addEventListener('touchmove', handleMove, { passive: false });
+    carousel.addEventListener('touchend', handleEnd, { passive: true });
+
+    // Add mouse event listeners
+    carousel.addEventListener('mousedown', handleStart);
+    carousel.addEventListener('mousemove', handleMove);
+    carousel.addEventListener('mouseup', handleEnd);
+    carousel.addEventListener('mouseleave', () => {
+        if (isDragging) {
+            isDragging = false;
+            carousel.style.cursor = 'grab';
+        }
+    });
+
+    // Set initial cursor
+    carousel.style.cursor = 'grab';
 
     // Event listeners for navigation buttons
     if (nextBtn) nextBtn.addEventListener('click', nextImage);
